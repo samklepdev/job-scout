@@ -1,0 +1,64 @@
+.layout { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 28px; align-items: start; }
+.back { font-size: 14px; color: var(--muted); text-decoration: none; }
+.back:hover { color: var(--text); }
+.title { font-size: 26px; letter-spacing: -0.02em; margin-top: 10px; }
+.meta { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 6px; color: var(--muted); font-size: 14px; }
+.meta strong { color: var(--text); }
+.remote { color: var(--good); font-weight: 550; }
+.toolbar { display: flex; align-items: center; gap: 12px; margin: 16px 0 20px; flex-wrap: wrap; }
+.apply {
+  background: var(--accent);
+  color: var(--accent-contrast);
+  text-decoration: none;
+  font-weight: 550;
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+.description {
+  white-space: pre-wrap;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.side { display: grid; gap: 16px; position: sticky; top: 76px; }
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+.panelTitle { font-size: 15px; margin-bottom: 4px; }
+.scoreHead { display: flex; gap: 14px; align-items: center; margin-bottom: 12px; }
+.excluded { margin: 0; color: var(--bad); font-size: 13px; }
+
+.breakdown { margin: 0; display: grid; gap: 10px; }
+.row { display: grid; grid-template-columns: 84px 1fr; gap: 10px; align-items: start; }
+.row dt { font-size: 13px; font-weight: 550; }
+.row dd { margin: 0; }
+.weight { color: var(--muted); font-family: var(--mono); font-size: 11px; font-weight: 400; }
+.bar { height: 6px; background: var(--surface-2); border-radius: 999px; overflow: hidden; margin-top: 6px; }
+.bar div { height: 100%; background: var(--accent); border-radius: 999px; }
+.detail { display: block; font-size: 12.5px; color: var(--muted); margin-top: 3px; }
+.missing { font-size: 12.5px; color: var(--muted); margin: 12px 0 0; border-top: 1px solid var(--border); padding-top: 10px; }
+
+.label { display: block; font-size: 13px; font-weight: 550; margin: 10px 0 6px; }
+.label span { color: var(--muted); font-weight: 400; }
+.note { font-size: 14px; color: var(--muted); }
+.note a { color: var(--accent); }
+
+.versions { list-style: none; padding: 0; margin: 16px 0 0; border-top: 1px solid var(--border); }
+.versions li { display: flex; justify-content: space-between; padding: 8px 0; font-size: 14px; border-bottom: 1px solid var(--border); }
+.versions a { color: var(--accent); text-decoration: none; font-weight: 550; }
+.versions span { color: var(--muted); font-size: 13px; }
+
+@media (max-width: 860px) {
+  .layout { grid-template-columns: 1fr; }
+  .side { position: static; order: -1; }
+}

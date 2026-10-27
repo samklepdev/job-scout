@@ -1,0 +1,67 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-weight: 550;
+  font-size: 14px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.button:disabled { opacity: 0.7; cursor: progress; }
+
+.primary { background: var(--accent); color: var(--accent-contrast); }
+.primary:hover:not(:disabled) { filter: brightness(1.08); }
+
+.secondary { background: var(--surface); border-color: var(--border); }
+.secondary:hover:not(:disabled) { background: var(--surface-2); }
+
+.ghost {
+  background: transparent;
+  color: var(--muted);
+  padding: 5px 9px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.ghost:hover { background: var(--surface-2); color: var(--text); }
+
+.spinner {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.formFooter, .formFooterInline {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.formFooter { margin-top: 16px; }
+
+.ok { color: var(--good); font-size: 14px; }
+.error { color: var(--bad); font-size: 14px; }
+
+.score {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font: 600 15px/1 var(--mono);
+  border: 2px solid currentColor;
+}
+.scoreLg { width: 64px; height: 64px; font-size: 22px; }
+.high { color: var(--good); background: var(--good-bg); }
+.mid { color: var(--warn); background: var(--warn-bg); }
+.low { color: var(--muted); background: var(--surface-2); }
+
+.statusButtons { display: flex; gap: 2px; flex-wrap: wrap; }
